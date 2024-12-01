@@ -37,7 +37,7 @@
                     $client->messages->create(
                         $row->phone, array(
                             "from" => "",
-                            "body" => "Your adnan-tech.com 2-factor authentication code is: ". $pin
+                            "body" => "Your 2-factor authentication code is: ". $pin
                         )
                     );
  

@@ -17,7 +17,7 @@
             $sql = "UPDATE usuarios SET pin = '' WHERE id = 'user_id'";
             mysqli_query($conn, $sql);
 
-            $_SERVER["user"] ->is_verified = true;
+            $_SESSION["user"] ->is_verified = true;
             header("Location: index.php");
 
         }
