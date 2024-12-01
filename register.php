@@ -6,8 +6,8 @@
         $password = $_POST["password"];
         $password = password_hash($password, PASSWORD_DEFAULT);
 
-        $conn = mysql_connect("localhost", "", "deprueba");
-        $sql = "INSERT INTO users (email, phone, password, is_tfa_enabled, pin) VALUES ('$email', '$phone', '$password', 0, '')";
+        $conn = new mysqli("localhost", "root", "", "deprueba");
+        $sql = "INSERT INTO usuarios (email, phone, password, is_tfa_enabled, pin) VALUES ('$email', '$phone', '$password', 0, '')";
 
         mysqli_query($conn, $sql);
  
