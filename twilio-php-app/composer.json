@@ -1,0 +1,10 @@
+{
+    "name": "vendor/name",
+    "description": "noselol",
+    "type": "project",
+    "require": {
+        "twilio/sdk": "^8.3"
+    },
+    "license": "MIT",
+    "minimum-stability": "stable"
+}

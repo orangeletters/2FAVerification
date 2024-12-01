@@ -1,7 +1,7 @@
 <?php
  
 session_start();
-$conn = mysql_connect("localhost", "root", "", "deprueba");
+$conn = new mysqli("localhost", "root", "", "deprueba");
  
 if (isset($_SESSION["user"]) && $_SESSION["user"]->is_verified)
 {
@@ -12,7 +12,7 @@ if (isset($_SESSION["user"]) && $_SESSION["user"]->is_verified)
     {
         $is_tfa_enabled = $_POST["is_tfa_enabled"];
  
-        $sql = "UPDATE users SET is_tfa_enabled = '$is_tfa_enabled' WHERE id = '$user_id'";
+        $sql = "UPDATE usuarios SET is_tfa_enabled = '$is_tfa_enabled' WHERE id = '$user_id'";
         mysqli_query($conn, $sql);
  
         echo "Settings changed";

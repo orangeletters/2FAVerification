@@ -1,8 +1,8 @@
 <?php
- 
+    //esta mierda funciona, pero twilio no coopera, hasta aquí
     session_start();
  
-    require_once "vendor/autoload.php";
+    require_once "twilio-php-app/vendor/autoload.php";
     use Twilio\Rest\Client;
  
     $sid = "";
@@ -13,7 +13,7 @@
         $email = $_POST["email"];
         $password = $_POST["password"];
  
-        $conn = mysql_connect("localhost", "root", "", "deprueba");
+        $conn = new mysqli("localhost", "root", "", "deprueba");
          
         $sql = "SELECT * FROM usuarios WHERE email = '$email'";
         $result = mysqli_query($conn, $sql);
@@ -63,3 +63,11 @@
     }
  
 ?>
+
+<form method="POST" action="login.php">
+     
+    <input type="email" name="email" placeholder="Email">
+    <input type="password" name="password" placeholder="Password">
+     
+    <input type="submit" name="login">
+</form>

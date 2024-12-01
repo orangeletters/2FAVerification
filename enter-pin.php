@@ -7,7 +7,7 @@
         $pin = $_POST["pin"];
         $user_id = $_SESSION["user"]->id;
 
-        $conn = mysql_connect("localhost", "root", "", "deprueba");
+        $conn = new mysqli("localhost", "root", "", "deprueba");
 
         $sql = "SELECT * FROM usuarios WHERE id = '$user_id' AND pin = '$pin'";
         $result = mysqli_query($conn, $sql);
