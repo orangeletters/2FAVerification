@@ -1,5 +1,5 @@
 <?php
-    //esta mierda funciona, pero twilio no coopera, hasta aquí
+    //esta mierda funciona, hasta aquí
     session_start();
  
     require_once "twilio-php-app/vendor/autoload.php";
