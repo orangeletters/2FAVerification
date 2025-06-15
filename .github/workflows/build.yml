@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     name: Build and analyze
-    runs-on: [self-hosted, Windows]
+    runs-on: [self-hosted, windows]
     
     steps:
       - run: echo "¡Hola desde el runner local!"
